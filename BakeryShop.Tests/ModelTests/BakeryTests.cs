@@ -17,17 +17,16 @@ namespace BakeryShop.Tests
     [TestMethod]
     public void BakeryOrder_ReturnCost_Int()
     {
-      // 5, 3
       BakeryItem newBakeryItem = new BakeryItem(5);
       Assert.AreEqual(20, newBakeryItem.BakeryOrder(5, 3));
     }
 
-    // [TestMethod]
-    // public void PastryOrder_ReturnMoreThan4_Int()
-    // {
-    //   Pastry newPastry = new Pastry(8);
-    //   Assert.AreEqual(12, newPastry.PastryOrder());
-    // }
+    [TestMethod]
+    public void BreadConstructor_CreateInstanceOfBread_Bread()
+    {
+      Bread newBread = new Bread(7);
+      Assert.AreEqual(typeof(Bread), newBread.GetType());
+    }
   }
 
   // [TestClass]
