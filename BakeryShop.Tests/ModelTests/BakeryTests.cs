@@ -7,7 +7,7 @@ namespace BakeryShop.Tests
   [TestClass]
   public class BakeryTests
   {
-    // Test methods go here
+    // for bread
     [TestMethod]
     public void BreadConstructor_CreateInstanceOfBread_Bread()
     {
@@ -27,6 +27,14 @@ namespace BakeryShop.Tests
     {
       Bread newBread = new Bread(7);
       Assert.AreEqual(25, newBread.BreadOrder());
+    }
+
+    // for pastry
+    [TestMethod]
+    public void PastryConstructor_CreateInstanceOfPastry_Pastry()
+    {
+      Pastry newPastry = new Pastry(2);
+      Assert.AreEqual(typeof(Pastry), Pastry.GetType());
     }
 
   }
