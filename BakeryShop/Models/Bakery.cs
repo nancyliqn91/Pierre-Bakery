@@ -1,3 +1,5 @@
+using System;
+
 namespace BakeryShop.Models
 {
   public class Bread
@@ -21,6 +23,12 @@ namespace BakeryShop.Models
       if (1 <= Loaves && Loaves< 3)
       {
         breadMoney = Loaves * 5;
+        return breadMoney;
+      }
+
+      if (Loaves> 3)
+      {
+        breadMoney = Loaves * 5 - (int)(Math.Floor((double)(Loaves / 3))) * 5;
         return breadMoney;
       }
 
