@@ -44,9 +44,15 @@ namespace BakeryShop.Tests
     public void PastryOrder_ReturnLessThan4_Int()
     {
       Pastry newPastry = new Pastry(3);
-      Assert.AreEqual(10, newPastry.PastryOrder());
+      Assert.AreEqual(6, newPastry.PastryOrder());
     }
 
+    [TestMethod]
+    public void PastryOrder_ReturnMoreThan4_Int()
+    {
+      Pastry newPastry = new Pastry(8);
+      Assert.AreEqual(12, newPastry.PastryOrder());
+    }
 
   }
 
