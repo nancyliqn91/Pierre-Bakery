@@ -19,7 +19,7 @@ namespace BakeryShop.Tests
     {
       // 5, 3
       BakeryItem newBakeryItem = new BakeryItem(5);
-      Assert.AreEqual(10, newBakeryItem.BakeryOrder(5, 3));
+      Assert.AreEqual(20, newBakeryItem.BakeryOrder(5, 3));
     }
 
     // [TestMethod]
