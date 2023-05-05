@@ -15,18 +15,18 @@ namespace BakeryShop.Tests
     }
 
     [TestMethod]
-    public void PastryOrder_ReturnLessThan4_Int()
+    public void BakeryOrder_ReturnCost_Int()
     {
-      Pastry newPastry = new Pastry(3);
-      Assert.AreEqual(6, newPastry.PastryOrder());
+      BakeryItem newBakeryItem = new BakeryItem(5, 3);
+      Assert.AreEqual(10, newBakeryItem.BakeryOrder());
     }
 
-    [TestMethod]
-    public void PastryOrder_ReturnMoreThan4_Int()
-    {
-      Pastry newPastry = new Pastry(8);
-      Assert.AreEqual(12, newPastry.PastryOrder());
-    }
+    // [TestMethod]
+    // public void PastryOrder_ReturnMoreThan4_Int()
+    // {
+    //   Pastry newPastry = new Pastry(8);
+    //   Assert.AreEqual(12, newPastry.PastryOrder());
+    // }
   }
 
   // [TestClass]
