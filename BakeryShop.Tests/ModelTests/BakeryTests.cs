@@ -28,14 +28,18 @@ namespace BakeryShop.Tests
       Bread newBread = new Bread(7);
       Assert.AreEqual(25, newBread.BreadOrder());
     }
-
+  }
     // for pastry
+  [TestClass]
+  public class PastryTests
+  {
     [TestMethod]
     public void PastryConstructor_CreateInstanceOfPastry_Pastry()
     {
       Pastry newPastry = new Pastry(2);
-      Assert.AreEqual(typeof(Pastry), Pastry.GetType());
+      Assert.AreEqual(typeof(Pastry), newPastry.GetType());
     }
 
   }
+
 }
