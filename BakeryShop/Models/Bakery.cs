@@ -59,7 +59,11 @@ namespace BakeryShop.Models
         pastryMoney = Loaves * 2;
         return pastryMoney;
       }
-
+      if (Loaves >= 4)
+      {
+        pastryMoney = Loaves * 2 - (int)(Math.Floor((double)(Loaves / 4))) * 2;
+        return pastryMoney;
+      }
 
 
       return pastryMoney;
