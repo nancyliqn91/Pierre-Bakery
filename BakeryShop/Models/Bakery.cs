@@ -10,22 +10,19 @@ namespace BakeryShop.Models
       Quantity = num;
     }
 
-    // public int BreadOrder()
-    // {
-    //   int breadMoney = 0;
-    //   if (1 <= Loaves && Loaves< 3)
-    //   {
-    //     breadMoney = Loaves * 5;
-    //     return breadMoney;
-    //   }
-    //   if (Loaves >= 3)
-    //   {
-    //     breadMoney = Loaves * 5 - (int)(Math.Floor((double)(Loaves / 3))) * 5;
-    //     return breadMoney;
-    //   }
+    public int BakeryOrder(int unitPrice, int discountQuantity)
+    {
+      int cost = 0;
+      if (Quantity > 0)
+      {
+        int regularPrice = Quantity * unitPrice;
+        int discount = (int)(Math.Floor((double)(Quantity / discountQuantity))) * unitPrice;
+        cost = regularPrice - discount;
+        return cost;
+      }
  
-    //   return breadMoney;
-    // }
+      return cost;
+    }
   }
 
 
