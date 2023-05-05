@@ -21,14 +21,26 @@ namespace BakeryShop.Tests
       Assert.AreEqual(20, newBakeryItem.BakeryOrder(5, 3));
     }
 
+  }
+
+  [TestClass]
+  public class BreadTests
+  {
+    // for bread
     [TestMethod]
     public void BreadConstructor_CreateInstanceOfBread_Bread()
     {
       Bread newBread = new Bread(7);
       Assert.AreEqual(typeof(Bread), newBread.GetType());
     }
-  }
 
+    [TestMethod]
+    public void BakeryOrder_ReturnBreadCost_Int()
+    {
+      Bread newBread = new Bread(7);
+      Assert.AreEqual(25, newBread.BakeryOrder());
+    }
+  }
   // [TestClass]
   // public class BakeryTests
   // {
