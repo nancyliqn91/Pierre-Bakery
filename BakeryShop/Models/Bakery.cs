@@ -26,32 +26,13 @@ namespace BakeryShop.Models
   }
 
 
-  // public class Bread
-  // {
-  //   public int Loaves { get; set; }
-  //   // private int _breadMoney;
-  //   public Bread(int bNum)
-  //   {
-  //     Loaves = bNum;
-  //   }
+  public class Bread : BakeryItem
+  {
+    public Bread(int quantity) : base(quantity)
+    {
+    }
 
-  //   public int BreadOrder()
-  //   {
-  //     int breadMoney = 0;
-  //     if (1 <= Loaves && Loaves< 3)
-  //     {
-  //       breadMoney = Loaves * 5;
-  //       return breadMoney;
-  //     }
-  //     if (Loaves >= 3)
-  //     {
-  //       breadMoney = Loaves * 5 - (int)(Math.Floor((double)(Loaves / 3))) * 5;
-  //       return breadMoney;
-  //     }
-
-  //     return breadMoney;
-  //   }
-  // }
+  }
 
   // public class Pastry
   // {
