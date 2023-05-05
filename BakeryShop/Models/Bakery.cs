@@ -38,7 +38,7 @@ namespace BakeryShop.Models
 
   public class Pastry
   {
-    public int PNumber { get; set; }
+    public int Loaves { get; set; }
     private int _pastryMoney;
 
     public int PastryMoney
@@ -48,10 +48,22 @@ namespace BakeryShop.Models
 
     public Pastry(int pNum)
     {
-       PNumber = pNum;
+       Loaves = pNum;
     }
 
+    public int PastryOrder()
+    {
+      int pastryMoney = 0;
+      if (1 <= Loaves && Loaves< 4)
+      {
+        pastryMoney = Loaves * 2;
+        return pastryMoney;
+      }
 
+
+
+      return pastryMoney;
+    }
   }
 
 
