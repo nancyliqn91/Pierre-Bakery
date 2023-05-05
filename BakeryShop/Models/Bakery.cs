@@ -26,15 +26,31 @@ namespace BakeryShop.Models
         return breadMoney;
       }
 
-      if (Loaves> 3)
+      if (Loaves >= 3)
       {
         breadMoney = Loaves * 5 - (int)(Math.Floor((double)(Loaves / 3))) * 5;
         return breadMoney;
       }
 
       return breadMoney;
-
     }
+  }
+
+  public class Pastry
+  {
+    public int PNumber { get; set; }
+    private int _pastryMoney;
+
+    public int PastryMoney
+    {
+      get { return _pastryMoney; }
+    }
+
+    public Pastry(int pNum)
+    {
+       PNumber = pNum;
+    }
+
 
   }
 
