@@ -42,10 +42,10 @@ namespace BakeryShop.Models
     {
     }
     
-    // public int BakeryOrder()
-    // {
-    //   return BakeryOrder(5, 3);
-    // }
+    public int BakeryOrder()
+    {
+      return BakeryOrder(2, 4);
+    }
   }
   // public class Pastry
   // {
