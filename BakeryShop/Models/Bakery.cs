@@ -20,16 +20,19 @@ namespace BakeryShop.Models
         cost = regularPrice - discount;
         return cost;
       }
- 
       return cost;
     }
   }
-
 
   public class Bread : BakeryItem
   {
     public Bread(int quantity) : base(quantity)
     {
+    }
+
+    public int BakeryOrder()
+    {
+      return BakeryOrder(5, 3);
     }
 
   }
