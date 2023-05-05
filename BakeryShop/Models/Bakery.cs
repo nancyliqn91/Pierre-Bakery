@@ -34,9 +34,19 @@ namespace BakeryShop.Models
     {
       return BakeryOrder(5, 3);
     }
-
   }
 
+  public class Pastry : BakeryItem
+  {
+    public Pastry(int quantity) : base(quantity)
+    {
+    }
+    
+    // public int BakeryOrder()
+    // {
+    //   return BakeryOrder(5, 3);
+    // }
+  }
   // public class Pastry
   // {
   //   public int Loaves { get; set; }
