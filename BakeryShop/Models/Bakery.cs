@@ -5,9 +5,11 @@ namespace BakeryShop.Models
   public class BakeryItem
   {
     public int Quantity { get; set; }
+    public static int TotalQuantity { get; private set; } = 0;
     public BakeryItem(int num)
     {
       Quantity = num;
+
     }
 
     public int BakeryOrder(int unitPrice, int discountQuantity)
@@ -47,6 +49,7 @@ namespace BakeryShop.Models
       return BakeryOrder(2, 4);
     }
   }
+
   // public class Pastry
   // {
   //   public int Loaves { get; set; }
