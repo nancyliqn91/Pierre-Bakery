@@ -23,8 +23,8 @@ class Program
   {
     // code to confirm or edit order
     Console.WriteLine("Please confirm you entered your order correctly:");
-    Console.WriteLine($"Bread: {newBread.Loaves}");
-    Console.WriteLine($"Pastry: {newPastry.Loaves}");
+    Console.WriteLine($"Bread: {newBread.Quantity}");
+    Console.WriteLine($"Pastry: {newPastry.Quantity}");
     Console.WriteLine("Is that correct? Enter 'yes' to proceed, or 'no' to re-enter your order.");
 
     string userInput = Console.ReadLine().ToLower();  
@@ -41,19 +41,19 @@ class Program
       int loaves = int.Parse(stringBread);
       int pNum = int.Parse(stringPastry);
 
-      newBread.Loaves = loaves;
-      newPastry.Loaves = pNum;
+      newBread.Quantity = loaves;
+      newPastry.Quantity = pNum;
       ConfirmOrEditOrder(newBread, newPastry);   
     }
   }
  
   static void CheckOut(Bread newBread, Pastry newPastry)
   {
-    int breadMoney = newBread.BreadOrder();
-    int pastryMoney = newPastry.PastryOrder();
-    int order = breadMoney + pastryMoney;
+    int breadCost = newBread.BakeryOrder();
+    int pastryCost = newPastry.BakeryOrder();
+    int order = breadCost + pastryCost;
     Console.WriteLine("-----------------------------------------");
-    Console.WriteLine($"Your bread order is ${breadMoney}, your pastry order is ${pastryMoney}. Your total is ${order}.");
+    Console.WriteLine($"Your bread order is ${breadCost}, your pastry order is ${pastryCost}. Your total cost is ${order}.");
     Console.WriteLine("-----------------------------------------");
 
     // new order
@@ -70,6 +70,5 @@ class Program
     }
 
   }
-
 
 }
