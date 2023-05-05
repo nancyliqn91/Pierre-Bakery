@@ -5,13 +5,7 @@ namespace BakeryShop.Models
   public class Bread
   {
     public int Loaves { get; set; }
-    private int _breadMoney;
-
-    public int BreadMoney
-    {
-      get { return _breadMoney; }
-    }
-
+    // private int _breadMoney;
     public Bread(int bNum)
     {
        Loaves = bNum;
@@ -39,13 +33,6 @@ namespace BakeryShop.Models
   public class Pastry
   {
     public int Loaves { get; set; }
-    private int _pastryMoney;
-
-    public int PastryMoney
-    {
-      get { return _pastryMoney; }
-    }
-
     public Pastry(int pNum)
     {
        Loaves = pNum;
@@ -64,15 +51,8 @@ namespace BakeryShop.Models
         pastryMoney = Loaves * 2 - (int)(Math.Floor((double)(Loaves / 4))) * 2;
         return pastryMoney;
       }
-
-
       return pastryMoney;
     }
   }
-
-
-
-
-
 
 }
