@@ -17,8 +17,9 @@ namespace BakeryShop.Tests
     [TestMethod]
     public void BakeryOrder_ReturnCost_Int()
     {
-      BakeryItem newBakeryItem = new BakeryItem(5, 3);
-      Assert.AreEqual(10, newBakeryItem.BakeryOrder());
+      // 5, 3
+      BakeryItem newBakeryItem = new BakeryItem(5);
+      Assert.AreEqual(10, newBakeryItem.BakeryOrder(5, 3));
     }
 
     // [TestMethod]
